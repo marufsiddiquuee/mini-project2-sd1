@@ -3,7 +3,7 @@
 A single-page educational website about galaxies, built with semantic HTML and Tailwind CSS.
 
 **Live page:** https://marufsiddiquuee.github.io/mini-project2-sd1
-**Repository:** https://github.com/marufsiddiquuee/mini-project2-sd1
+
 
 ## Features
 
