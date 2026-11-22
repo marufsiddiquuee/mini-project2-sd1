@@ -26,7 +26,7 @@ A single-page educational website about galaxies, built with semantic HTML and T
 ## How to run
 
 1. Download or clone this repository.
-2. Open `index.html` in any modern web browser.
+
 
 An internet connection is needed for the Tailwind styles to load.
 
