@@ -36,4 +36,6 @@ The Whirlpool Galaxy image is from [ESA/Hubble](https://esahubble.org). Check th
 
 ## Author
 
-Md. Maruf Siddique (CSE-2340, Software Development I)
+Name:Md. Maruf Siddique 
+Id: C253085 
+Course:CSE-2340, Software Development I
