@@ -2,347 +2,242 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Country Explorer</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Guide | Stars, Dust and Dark Matter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-100 text-slate-800 antialiased">
+<body class="bg-slate-950 text-slate-200 font-sans antialiased">
 
-  <nav class="sticky top-0 z-30 bg-slate-900/95 text-white shadow-lg backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="#home" class="flex items-center gap-2 text-lg font-extrabold">
-        <span class="grid h-8 w-8 place-items-center rounded-lg bg-amber-400 text-slate-900">&#9679;</span>
-        Country Explorer
-      </a>
-      <ul class="hidden items-center gap-1 md:flex">
-        <li><a href="#home" class="rounded-lg px-4 py-2 font-semibold transition hover:bg-white/10">Home</a></li>
-        <li><a href="#explore" class="rounded-lg px-4 py-2 font-semibold transition hover:bg-white/10">Explore</a></li>
-        <li>
-          <a href="#saved" class="flex items-center gap-2 rounded-lg px-4 py-2 font-semibold transition hover:bg-white/10">
-            Saved <span id="nav-saved" class="rounded-full bg-amber-400 px-2 text-xs font-extrabold text-slate-900">0</span>
-          </a>
-        </li>
+  
+  <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6" aria-label="Main navigation">
+      <a href="#top" class="text-xl font-bold text-violet-300 transition hover:text-violet-200">Galaxy Guide</a>
+
+      
+      <ul class="hidden gap-6 text-sm font-medium md:flex">
+        <li><a href="#anatomy" class="transition hover:text-violet-300">Anatomy</a></li>
+        <li><a href="#types" class="transition hover:text-violet-300">Types</a></li>
+        <li><a href="#sizes" class="transition hover:text-violet-300">Sizes</a></li>
+        <li><a href="#quiz" class="transition hover:text-violet-300">Quiz</a></li>
+        <li><a href="#facts" class="transition hover:text-violet-300">Facts</a></li>
+        <li><a href="#sources" class="transition hover:text-violet-300">Sources</a></li>
       </ul>
-      <button id="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false"
-              class="rounded-lg p-2 text-2xl leading-none transition hover:bg-white/10 md:hidden">&#9776;</button>
-    </div>
-    <ul id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-3 md:hidden">
-      <li><a href="#home" class="block rounded-lg px-3 py-3 font-semibold hover:bg-white/10">Home</a></li>
-      <li><a href="#explore" class="block rounded-lg px-3 py-3 font-semibold hover:bg-white/10">Explore</a></li>
-      <li><a href="#saved" class="block rounded-lg px-3 py-3 font-semibold hover:bg-white/10">Saved (<span id="nav-saved-m">0</span>)</a></li>
-    </ul>
-  </nav>
 
-  <header id="home" class="scroll-mt-16 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 px-4 py-16 text-white sm:py-24">
-    <div class="mx-auto max-w-6xl">
-      <h1 class="max-w-2xl text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">Explore every country on Earth.</h1>
-      <p class="mt-4 max-w-xl text-lg text-slate-300">Search by name, filter by region, sort by population, and save the places you want to visit.</p>
-      <div class="mt-8 flex flex-wrap gap-8">
-        <div><p id="stat-total" class="text-3xl font-extrabold">-</p><p class="text-sm text-slate-400">Countries loaded</p></div>
-        <div><p id="stat-shown" class="text-3xl font-extrabold">-</p><p class="text-sm text-slate-400">Matching your search</p></div>
-        <div><p id="stat-saved" class="text-3xl font-extrabold">0</p><p class="text-sm text-slate-400">Saved by you</p></div>
-      </div>
-      <a href="#explore" class="mt-8 inline-block rounded-xl bg-amber-400 px-6 py-3 font-bold text-slate-900 shadow transition hover:scale-105 hover:bg-amber-300">Start exploring</a>
-    </div>
+      
+      <details class="relative md:hidden">
+        <summary class="cursor-pointer list-none rounded-md border border-slate-600 px-3 py-1.5 text-sm font-medium transition hover:border-violet-300 hover:text-violet-300">
+          Menu
+        </summary>
+        <ul class="absolute right-0 mt-3 w-44 space-y-1 rounded-lg bg-slate-900 p-3 text-sm font-medium shadow-xl ring-1 ring-slate-700">
+          <li><a href="#anatomy" class="block rounded px-2 py-1.5 transition hover:bg-slate-800 hover:text-violet-300">Anatomy</a></li>
+          <li><a href="#types" class="block rounded px-2 py-1.5 transition hover:bg-slate-800 hover:text-violet-300">Types</a></li>
+          <li><a href="#sizes" class="block rounded px-2 py-1.5 transition hover:bg-slate-800 hover:text-violet-300">Sizes</a></li>
+          <li><a href="#quiz" class="block rounded px-2 py-1.5 transition hover:bg-slate-800 hover:text-violet-300">Quiz</a></li>
+          <li><a href="#facts" class="block rounded px-2 py-1.5 transition hover:bg-slate-800 hover:text-violet-300">Facts</a></li>
+          <li><a href="#sources" class="block rounded px-2 py-1.5 transition hover:bg-slate-800 hover:text-violet-300">Sources</a></li>
+        </ul>
+      </details>
+    </nav>
   </header>
 
-  <main id="explore" class="mx-auto max-w-6xl scroll-mt-16 px-4 py-12">
-    <div class="mb-6 flex flex-wrap items-end justify-between gap-2">
-      <h2 class="text-3xl font-extrabold">Explore countries</h2>
-      <span id="count" class="text-sm text-slate-500"></span>
-    </div>
+  <main id="top">
 
-    <div class="mb-6 grid gap-3 rounded-2xl bg-white p-4 shadow sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_auto]">
-      <input id="search" type="search" placeholder="Search by country name" aria-label="Search by country name"
-             class="rounded-xl border border-slate-200 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 sm:col-span-2 lg:col-span-1">
-      <select id="region" aria-label="Filter by region" class="rounded-xl border border-slate-200 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200">
-        <option value="all">All regions</option>
-        <option>Africa</option><option>Americas</option><option>Antarctic</option>
-        <option>Asia</option><option>Europe</option><option>Oceania</option>
-      </select>
-      <select id="sort" aria-label="Sort countries" class="rounded-xl border border-slate-200 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200">
-        <option value="name">Name A-Z</option>
-        <option value="pop-desc">Population high-low</option>
-        <option value="pop-asc">Population low-high</option>
-      </select>
-      <button id="reset" type="button" class="rounded-xl border border-slate-200 px-5 py-3 font-semibold transition hover:border-blue-500 hover:text-blue-600">Reset</button>
-    </div>
+  
+    <section class="relative overflow-hidden bg-gradient-to-b from-indigo-900 via-slate-950 to-slate-950 px-4 py-24 text-center sm:px-6">
+      <div class="absolute left-[12%] top-[20%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_3px_rgba(255,255,255,0.5)]" aria-hidden="true"></div>
+      <div class="absolute right-[18%] top-[35%] h-1.5 w-1.5 rounded-full bg-violet-200 shadow-[0_0_14px_5px_rgba(196,181,253,0.5)]" aria-hidden="true"></div>
+      <div class="absolute left-[30%] bottom-[18%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_3px_rgba(255,255,255,0.5)]" aria-hidden="true"></div>
 
-    <p id="status" role="status" aria-live="polite" class="mb-4 hidden font-semibold"></p>
-    <section id="results" class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" aria-label="Countries"></section>
-  </main>
-
-  <section id="saved" class="scroll-mt-16 border-t border-slate-200 bg-white px-4 py-12">
-    <div class="mx-auto max-w-6xl">
-      <div class="mb-6 flex items-center justify-between gap-4">
-        <h2 class="text-3xl font-extrabold">Saved countries <span id="saved-badge" class="ml-2 rounded-full bg-amber-400 px-3 py-0.5 align-middle text-sm font-extrabold text-slate-900">0</span></h2>
-        <button id="clear-saved" type="button" class="font-semibold text-red-600 hover:underline">Clear all</button>
+      <div class="relative mx-auto max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-violet-300">Beyond our solar system</p>
+        <h1 class="mt-5 text-4xl font-extrabold leading-tight text-white sm:text-6xl">
+          A galaxy is a city of stars, held together by gravity
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
+          Every galaxy is a huge collection of stars, gas, dust and dark matter. Our own, the Milky Way, contains roughly 100 to 400 billion stars. This guide walks through how galaxies are built, how astronomers classify them, and how big they really are.
+        </p>
+        <a href="#anatomy" class="mt-10 inline-block rounded-full bg-violet-500 px-7 py-3 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-300">
+          Start exploring
+        </a>
       </div>
-      <p id="saved-empty" class="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500">Nothing saved yet. Press Save on a country to add it here.</p>
-      <ul id="saved-list" class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"></ul>
-    </div>
-  </section>
+    </section>
 
-  <footer class="bg-slate-900 px-4 py-8 text-center text-sm text-slate-400">
-    Data from the REST Countries API (v5). Your saved list is stored in this browser only.
-  </footer>
+    
+    <section id="anatomy" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <header class="mb-12 text-center">
+        <h2 class="text-3xl font-bold text-white sm:text-4xl">Anatomy of a galaxy</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-slate-400">Most large galaxies share the same basic parts, though their sizes and proportions differ.</p>
+      </header>
 
-  <script>
-    const API_KEY = "rc_live_d833f15c2d1b4f35b0fc3a88a2132a56";
-    const API_BASE = "https://api.restcountries.com/countries/v5";
-    const FIELDS = "names.common,codes.alpha_3,capitals,region,population,flag.url_png";
-    const PAGE_SIZE = 100;
-    const STORAGE_KEY = "country-explorer-saved";
-    const CACHE_KEY = "country-explorer-cache";
-    const CACHE_HOURS = 24;
-    const IS_DEMO = API_KEY === "rc_live_demo";
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="rounded-2xl bg-slate-900 p-6 ring-1 ring-slate-800 transition hover:-translate-y-1 hover:ring-violet-400">
+          <h3 class="text-lg font-semibold text-violet-300">Nucleus</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">The bright centre. Most large galaxies hold a supermassive black hole here, often millions of times the mass of the Sun.</p>
+        </article>
+        <article class="rounded-2xl bg-slate-900 p-6 ring-1 ring-slate-800 transition hover:-translate-y-1 hover:ring-violet-400">
+          <h3 class="text-lg font-semibold text-violet-300">Bulge</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">A dense ball of mostly older stars surrounding the nucleus.</p>
+        </article>
+        <article class="rounded-2xl bg-slate-900 p-6 ring-1 ring-slate-800 transition hover:-translate-y-1 hover:ring-violet-400">
+          <h3 class="text-lg font-semibold text-violet-300">Disc</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">A flat, rotating plane of gas, dust and younger stars. This is where spiral arms appear.</p>
+        </article>
+        <article class="rounded-2xl bg-slate-900 p-6 ring-1 ring-slate-800 transition hover:-translate-y-1 hover:ring-violet-400">
+          <h3 class="text-lg font-semibold text-violet-300">Halo</h3>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">A faint, spherical region of old star clusters, surrounded by a much larger halo of dark matter.</p>
+        </article>
+      </div>
+    </section>
 
-    const $ = (id) => document.getElementById(id);
-    const els = {
-      search: $("search"), region: $("region"), sort: $("sort"), reset: $("reset"),
-      status: $("status"), count: $("count"), results: $("results"),
-      savedList: $("saved-list"), savedEmpty: $("saved-empty"), savedBadge: $("saved-badge"),
-      clearSaved: $("clear-saved"), statTotal: $("stat-total"), statShown: $("stat-shown"),
-      statSaved: $("stat-saved"), navSaved: $("nav-saved"), navSavedM: $("nav-saved-m"),
-      menuBtn: $("menu-btn"), mobileMenu: $("mobile-menu"),
-    };
+    
+    <section id="types" class="bg-slate-900 px-4 py-20 sm:px-6">
+      <div class="mx-auto max-w-6xl">
+        <h2 class="text-center text-3xl font-bold text-white sm:text-4xl">Types of galaxies</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-center text-slate-400">Astronomer Edwin Hubble sorted galaxies by shape in the 1920s. Scientists still use a version of his system today.</p>
 
-    let allCountries = [];
-    let status = "loading";
-    let errorMessage = "";
-    let saved = readSaved();
-
-    function readSaved() {
-      try {
-        const data = JSON.parse(localStorage.getItem(STORAGE_KEY)) ?? [];
-        return Array.isArray(data) ? data.filter((item) => item?.cca3) : [];
-      } catch {
-        return [];
-      }
-    }
-    const writeSaved = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-
-    const formatNumber = (n) => (n ?? 0).toLocaleString("en-US");
-    const show = (el, visible) => el.classList.toggle("hidden", !visible);
-    const escapeHTML = (text) =>
-      String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-
-    function readCache() {
-      try {
-        const cache = JSON.parse(localStorage.getItem(CACHE_KEY));
-        const fresh = cache && Date.now() - cache.time < CACHE_HOURS * 3600 * 1000;
-        return fresh && Array.isArray(cache.data) && cache.data.length > 0 ? cache.data : null;
-      } catch {
-        return null;
-      }
-    }
-    function writeCache(data) {
-      try {
-        localStorage.setItem(CACHE_KEY, JSON.stringify({ time: Date.now(), data }));
-      } catch {}
-    }
-
-    const normalize = ({ names, codes, capitals, region, population, flag }) => ({
-      cca3: codes?.alpha_3 ?? "",
-      name: { common: names?.common ?? "Unknown" },
-      flags: { png: flag?.url_png ?? "" },
-      capital: (capitals ?? []).map((c) => c?.name).filter(Boolean),
-      region: region ?? "",
-      population: population ?? 0,
-    });
-
-    async function fetchAllCountries() {
-      const all = [];
-      let offset = 0;
-      while (true) {
-        const url = `${API_BASE}?response_fields=${FIELDS}&limit=${PAGE_SIZE}&offset=${offset}`;
-        const response = await fetch(url, { headers: { Authorization: `Bearer ${API_KEY}` } });
-        if (response.status === 401) throw new Error("Your API key is missing or invalid.");
-        if (response.status === 403) throw new Error("Monthly request limit reached, or this key is not allowed.");
-        if (response.status === 429) throw new Error("Too many requests. Wait a few seconds and try again.");
-        if (!response.ok) throw new Error(`Request failed (${response.status}).`);
-        const { data } = await response.json();
-        const objects = data?.objects ?? [];
-        all.push(...objects.map(normalize));
-        if (!data?.meta?.more || objects.length === 0) break;
-        offset += PAGE_SIZE;
-      }
-      return all.filter((country) => country.cca3);
-    }
-
-    async function loadCountries(forceRefresh = false) {
-      status = "loading";
-      render();
-      const cached = forceRefresh ? null : readCache();
-      if (cached) {
-        allCountries = cached;
-        status = "success";
-        render();
-        return;
-      }
-      try {
-        allCountries = await fetchAllCountries();
-        if (allCountries.length === 0) throw new Error("The API returned no countries.");
-        if (!IS_DEMO) writeCache(allCountries);
-        status = "success";
-      } catch (error) {
-        console.error(error);
-        errorMessage = error instanceof TypeError
-          ? "The request was blocked. Add this site's address to your API key's allowed origins, and open the page with Live Server or your deployed link (not by double-clicking the file)."
-          : error.message;
-        status = "error";
-      }
-      render();
-    }
-
-    function getVisibleCountries() {
-      const query = els.search.value.trim().toLowerCase();
-      const region = els.region.value;
-
-      const filtered = allCountries.filter(({ name, region: r }) =>
-        (region === "all" || r === region) &&
-        (name?.common ?? "").toLowerCase().includes(query)
-      );
-
-      const sorted = [...filtered];
-      const sortBy = els.sort.value;
-      if (sortBy === "pop-desc") sorted.sort((a, b) => b.population - a.population);
-      else if (sortBy === "pop-asc") sorted.sort((a, b) => a.population - b.population);
-      else sorted.sort((a, b) => a.name.common.localeCompare(b.name.common));
-      return sorted;
-    }
-
-    function renderCard(country) {
-      const { name, flags, capital, population, region, cca3 } = country;
-      const isSaved = saved.some((item) => item.cca3 === cca3);
-      return `
-        <article class="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow transition duration-200 hover:-translate-y-1 hover:shadow-xl">
-          <div class="relative aspect-[16/10] bg-slate-200">
-            <img src="${escapeHTML(flags?.png ?? "")}" alt="Flag of ${escapeHTML(name.common)}" loading="lazy" class="h-full w-full object-cover">
-            <span class="absolute bottom-2 left-2 rounded-full bg-slate-900/85 px-3 py-0.5 text-xs font-bold text-white">${escapeHTML(region || "N/A")}</span>
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <div class="flex flex-col rounded-2xl bg-slate-950 p-7 ring-1 ring-slate-800 transition hover:-translate-y-1 hover:ring-violet-400">
+            <h3 class="text-xl font-semibold text-white">Spiral</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">Flat discs with curved arms of young, bright blue stars and star-forming gas. Spirals make up a large share of bright nearby galaxies, though the exact share depends on the survey.</p>
+            <p class="mt-5 text-sm font-semibold text-violet-300">Examples: Milky Way, Whirlpool Galaxy (M51)</p>
           </div>
-          <div class="flex flex-1 flex-col gap-3 p-4">
-            <h3 class="text-lg font-bold leading-snug">${escapeHTML(name.common)}</h3>
-            <dl class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
-              <dt class="text-slate-500">Capital</dt><dd class="text-right font-semibold">${escapeHTML(capital?.[0] ?? "N/A")}</dd>
-              <dt class="text-slate-500">Population</dt><dd class="text-right font-semibold">${formatNumber(population)}</dd>
-            </dl>
-            <button type="button" data-save="${cca3}" ${isSaved ? "disabled" : ""}
-              class="mt-auto w-full rounded-xl py-2.5 font-bold transition ${isSaved ? "cursor-default bg-blue-50 text-blue-700" : "bg-blue-600 text-white hover:bg-blue-700"}">
-              ${isSaved ? "Saved" : "Save"}
-            </button>
+
+          <div class="flex flex-col rounded-2xl bg-slate-950 p-7 ring-1 ring-slate-800 transition hover:-translate-y-1 hover:ring-violet-400">
+            <h3 class="text-xl font-semibold text-white">Elliptical</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">Smooth, round or oval shapes with mostly older, reddish stars and very little gas. They range from nearly round to highly stretched.</p>
+            <p class="mt-5 text-sm font-semibold text-violet-300">Examples: Messier 87 (M87), M49</p>
           </div>
-        </article>`;
-    }
 
-    function renderResults() {
-      show(els.status, false);
-      els.count.textContent = "";
+          <div class="flex flex-col rounded-2xl bg-slate-950 p-7 ring-1 ring-slate-800 transition hover:-translate-y-1 hover:ring-violet-400">
+            <h3 class="text-xl font-semibold text-white">Irregular</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">No clear shape. Often disturbed by collisions or gravity from neighbouring galaxies, and frequently full of active star formation.</p>
+            <p class="mt-5 text-sm font-semibold text-violet-300">Examples: Large Magellanic Cloud, Small Magellanic Cloud</p>
+          </div>
+        </div>
 
-      if (status === "loading") {
-        els.statTotal.textContent = els.statShown.textContent = "-";
-        els.results.innerHTML = '<div class="h-72 animate-pulse rounded-2xl bg-slate-200"></div>'.repeat(8);
-        els.status.textContent = "Loading countries...";
-        show(els.status, true);
-        return;
-      }
-      if (status === "error") {
-        els.statTotal.textContent = els.statShown.textContent = "-";
-        els.results.innerHTML = `
-          <div class="col-span-full rounded-2xl border border-red-200 bg-red-50 p-10 text-center text-red-700">
-            <p class="text-lg font-bold">Could not load countries.</p>
-            <p class="mt-1">${escapeHTML(errorMessage)}</p>
-            <button type="button" id="retry" class="mt-4 rounded-xl bg-blue-600 px-5 py-2.5 font-bold text-white hover:bg-blue-700">Try again</button>
-          </div>`;
-        return;
-      }
+        <p class="mx-auto mt-10 max-w-2xl rounded-xl border border-violet-900 bg-slate-950 p-5 text-center text-sm text-slate-300">
+          <strong class="text-violet-300">Did you know?</strong> About two thirds of spiral galaxies have a central bar of stars across the nucleus. The Milky Way is thought to be one of them.
+        </p>
+      </div>
+    </section>
+    
+    <section id="sizes" class="mx-auto max-w-4xl px-4 py-20 sm:px-6">
+      <h2 class="text-center text-3xl font-bold text-white sm:text-4xl">How big are they?</h2>
 
-      const visible = getVisibleCountries();
-      els.statTotal.textContent = formatNumber(allCountries.length);
-      els.statShown.textContent = formatNumber(visible.length);
+      <figure class="mt-12">
+        <div class="space-y-6">
+          <div role="img" aria-label="Andromeda Galaxy, about 220,000 light-years across, full bar length">
+            <div class="mb-2 flex justify-between text-sm" aria-hidden="true"><span class="font-semibold text-white">Andromeda Galaxy</span><span class="text-slate-400">~220,000 light-years</span></div>
+            <div class="h-4 w-full rounded-full bg-slate-800" aria-hidden="true"><div class="h-4 w-full rounded-full bg-violet-500"></div></div>
+          </div>
+          <div role="img" aria-label="Milky Way, about 100,000 light-years across, 45 percent of Andromeda">
+            <div class="mb-2 flex justify-between text-sm" aria-hidden="true"><span class="font-semibold text-white">Milky Way</span><span class="text-slate-400">~100,000 light-years</span></div>
+            <div class="h-4 w-full rounded-full bg-slate-800" aria-hidden="true"><div class="h-4 w-[45%] rounded-full bg-violet-400"></div></div>
+          </div>
+          <div role="img" aria-label="Triangulum Galaxy, about 60,000 light-years across, 27 percent of Andromeda">
+            <div class="mb-2 flex justify-between text-sm" aria-hidden="true"><span class="font-semibold text-white">Triangulum Galaxy</span><span class="text-slate-400">~60,000 light-years</span></div>
+            <div class="h-4 w-full rounded-full bg-slate-800" aria-hidden="true"><div class="h-4 w-[27%] rounded-full bg-violet-300"></div></div>
+          </div>
+          <div role="img" aria-label="Large Magellanic Cloud, about 14,000 light-years across, 6 percent of Andromeda">
+            <div class="mb-2 flex justify-between text-sm" aria-hidden="true"><span class="font-semibold text-white">Large Magellanic Cloud</span><span class="text-slate-400">~14,000 light-years</span></div>
+            <div class="h-4 w-full rounded-full bg-slate-800" aria-hidden="true"><div class="h-4 w-[6%] rounded-full bg-violet-200"></div></div>
+          </div>
+        </div>
+        <figcaption class="mt-6 text-center text-sm text-slate-400">Approximate diameters, shown relative to Andromeda. Bar length is to scale.</figcaption>
+      </figure>
+    </section>
 
-      if (visible.length === 0) {
-        els.results.innerHTML = `
-          <div class="col-span-full rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
-            <p class="text-lg font-bold">No countries found.</p><p>Try a different name or region.</p>
-          </div>`;
-        return;
-      }
-      els.count.textContent = `Showing ${visible.length} of ${allCountries.length}` + (IS_DEMO ? " (demo key: sample data only)" : "");
-      els.results.innerHTML = visible.map(renderCard).join("");
-    }
+    
+    <section id="quiz" class="bg-slate-900 px-4 py-20 sm:px-6">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-center text-3xl font-bold text-white sm:text-4xl">Quick quiz</h2>
+        <p class="mt-3 text-center text-slate-400">Three questions. Pick an answer to check it.</p>
 
-    function renderSaved() {
-      show(els.savedEmpty, saved.length === 0);
-      show(els.clearSaved, saved.length > 0);
-      els.savedBadge.textContent = els.statSaved.textContent =
-        els.navSaved.textContent = els.navSavedM.textContent = saved.length;
-      els.savedList.innerHTML = saved
-        .map(({ cca3, name, flag }) => `
-          <li class="flex items-center gap-3 rounded-xl border border-slate-200 p-3 shadow-sm transition hover:shadow-md">
-            <img src="${escapeHTML(flag ?? "")}" alt="" class="h-8 w-12 rounded border border-slate-200 object-cover">
-            <span class="flex-1 font-semibold">${escapeHTML(name)}</span>
-            <button type="button" data-remove="${cca3}" aria-label="Remove ${escapeHTML(name)}"
-              class="rounded-lg px-2 text-xl leading-none text-slate-400 transition hover:bg-red-50 hover:text-red-600">&times;</button>
-          </li>`)
-        .join("");
-    }
+        <!-- Question 1 -->
+        <div class="mt-12">
+          <p id="q1-label" class="text-lg font-semibold text-white">1. Which galaxy type has a smooth, round shape and mostly old stars?</p>
+          <div role="radiogroup" aria-labelledby="q1-label" class="mt-4 grid gap-4 sm:grid-cols-3">
+            <input type="radio" name="q1" id="q1-spiral" class="peer/q1spiral sr-only">
+            <input type="radio" name="q1" id="q1-elliptical" class="peer/q1elliptical sr-only">
+            <input type="radio" name="q1" id="q1-irregular" class="peer/q1irregular sr-only">
 
-    function render() {
-      renderResults();
-      renderSaved();
-    }
+            <label for="q1-spiral" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q1spiral:ring-2 peer-focus-visible/q1spiral:ring-violet-300 peer-checked/q1spiral:border-violet-400 peer-checked/q1spiral:bg-violet-900">Spiral</label>
+            <label for="q1-elliptical" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q1elliptical:ring-2 peer-focus-visible/q1elliptical:ring-violet-300 peer-checked/q1elliptical:border-violet-400 peer-checked/q1elliptical:bg-violet-900">Elliptical</label>
+            <label for="q1-irregular" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q1irregular:ring-2 peer-focus-visible/q1irregular:ring-violet-300 peer-checked/q1irregular:border-violet-400 peer-checked/q1irregular:bg-violet-900">Irregular</label>
 
-    function saveCountry(code) {
-      if (saved.some((item) => item.cca3 === code)) return;
-      const country = allCountries.find((c) => c.cca3 === code);
-      if (!country) return;
-      saved = [...saved, { cca3: code, name: country.name.common, flag: country.flags?.png ?? "" }];
-      writeSaved();
-      render();
-    }
+            <p class="col-span-full hidden rounded-lg bg-emerald-950 p-4 text-center text-sm text-emerald-300 peer-checked/q1elliptical:block">Correct. Elliptical galaxies are smooth and mostly made of older stars.</p>
+            <p class="col-span-full hidden rounded-lg bg-rose-950 p-4 text-center text-sm text-rose-300 peer-checked/q1spiral:block peer-checked/q1irregular:block">Not quite. Try again, and think about which shape is smooth and round.</p>
+          </div>
+        </div>
 
-    function removeCountry(code) {
-      saved = saved.filter((item) => item.cca3 !== code);
-      writeSaved();
-      render();
-    }
+        
+        <div class="mt-12">
+          <p id="q2-label" class="text-lg font-semibold text-white">2. What type of galaxy is the Milky Way?</p>
+          <div role="radiogroup" aria-labelledby="q2-label" class="mt-4 grid gap-4 sm:grid-cols-3">
+            <input type="radio" name="q2" id="q2-spiral" class="peer/q2spiral sr-only">
+            <input type="radio" name="q2" id="q2-elliptical" class="peer/q2elliptical sr-only">
+            <input type="radio" name="q2" id="q2-irregular" class="peer/q2irregular sr-only">
 
-    [els.search, els.region, els.sort].forEach((el) => el.addEventListener("input", renderResults));
+            <label for="q2-spiral" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q2spiral:ring-2 peer-focus-visible/q2spiral:ring-violet-300 peer-checked/q2spiral:border-violet-400 peer-checked/q2spiral:bg-violet-900">Spiral (barred)</label>
+            <label for="q2-elliptical" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q2elliptical:ring-2 peer-focus-visible/q2elliptical:ring-violet-300 peer-checked/q2elliptical:border-violet-400 peer-checked/q2elliptical:bg-violet-900">Elliptical</label>
+            <label for="q2-irregular" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q2irregular:ring-2 peer-focus-visible/q2irregular:ring-violet-300 peer-checked/q2irregular:border-violet-400 peer-checked/q2irregular:bg-violet-900">Irregular</label>
 
-    els.reset.addEventListener("click", () => {
-      els.search.value = "";
-      els.region.value = "all";
-      els.sort.value = "name";
-      renderResults();
-    });
+            <p class="col-span-full hidden rounded-lg bg-emerald-950 p-4 text-center text-sm text-emerald-300 peer-checked/q2spiral:block">Correct. The Milky Way is a barred spiral with arms of young stars.</p>
+            <p class="col-span-full hidden rounded-lg bg-rose-950 p-4 text-center text-sm text-rose-300 peer-checked/q2elliptical:block peer-checked/q2irregular:block">Not quite. Look at the Anatomy and Types sections for the Milky Way&rsquo;s shape.</p>
+          </div>
+        </div>
 
-    els.results.addEventListener("click", (event) => {
-      const { save } = event.target.dataset;
-      if (save) saveCountry(save);
-      if (event.target.id === "retry") loadCountries(true);
-    });
+        
+        <div class="mt-12">
+          <p id="q3-label" class="text-lg font-semibold text-white">3. Roughly how wide is the Milky Way?</p>
+          <div role="radiogroup" aria-labelledby="q3-label" class="mt-4 grid gap-4 sm:grid-cols-3">
+            <input type="radio" name="q3" id="q3-small" class="peer/q3small sr-only">
+            <input type="radio" name="q3" id="q3-medium" class="peer/q3medium sr-only">
+            <input type="radio" name="q3" id="q3-large" class="peer/q3large sr-only">
 
-    els.savedList.addEventListener("click", (event) => {
-      const { remove } = event.target.dataset;
-      if (remove) removeCountry(remove);
-    });
+            <label for="q3-small" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q3small:ring-2 peer-focus-visible/q3small:ring-violet-300 peer-checked/q3small:border-violet-400 peer-checked/q3small:bg-violet-900">1,000 light-years</label>
+            <label for="q3-medium" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q3medium:ring-2 peer-focus-visible/q3medium:ring-violet-300 peer-checked/q3medium:border-violet-400 peer-checked/q3medium:bg-violet-900">100,000 light-years</label>
+            <label for="q3-large" class="cursor-pointer rounded-xl border border-slate-700 bg-slate-950 px-5 py-4 text-center font-semibold transition hover:border-violet-400 peer-focus-visible/q3large:ring-2 peer-focus-visible/q3large:ring-violet-300 peer-checked/q3large:border-violet-400 peer-checked/q3large:bg-violet-900">10 million light-years</label>
 
-    els.clearSaved.addEventListener("click", () => {
-      saved = [];
-      writeSaved();
-      render();
-    });
+            <p class="col-span-full hidden rounded-lg bg-emerald-950 p-4 text-center text-sm text-emerald-300 peer-checked/q3medium:block">Correct. The Milky Way is roughly 100,000 light-years across.</p>
+            <p class="col-span-full hidden rounded-lg bg-rose-950 p-4 text-center text-sm text-rose-300 peer-checked/q3small:block peer-checked/q3large:block">Not quite. The Milky Way is roughly 100,000 light-years across.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    els.menuBtn.addEventListener("click", () => {
-      const open = els.mobileMenu.classList.toggle("hidden") === false;
-      els.menuBtn.setAttribute("aria-expanded", open);
-    });
-    els.mobileMenu.addEventListener("click", (event) => {
-      if (event.target.tagName === "A") show(els.mobileMenu, false);
-    });
+    
+    <section class="mx-auto max-w-4xl px-4 py-20 sm:px-6">
+      <h2 class="text-center text-3xl font-bold text-white sm:text-4xl">Key terms</h2>
+      <dl class="mt-12 grid gap-6 sm:grid-cols-2">
+        <div class="rounded-xl bg-slate-900 p-5 ring-1 ring-slate-800">
+          <dt class="font-semibold text-violet-300">Light-year</dt>
+          <dd class="mt-2 text-sm text-slate-400">The distance light travels in one year, about 9.46 trillion kilometres.</dd>
+        </div>
+        <div class="rounded-xl bg-slate-900 p-5 ring-1 ring-slate-800">
+          <dt class="font-semibold text-violet-300">Dark matter</dt>
+          <dd class="mt-2 text-sm text-slate-400">An invisible substance that does not emit light but whose gravity holds galaxies together.</dd>
+        </div>
+        <div class="rounded-xl bg-slate-900 p-5 ring-1 ring-slate-800">
+          <dt class="font-semibold text-violet-300">Star-forming region</dt>
+          <dd class="mt-2 text-sm text-slate-400">A patch of dense gas and dust where new stars are being born.</dd>
+        </div>
+        <div class="rounded-xl bg-slate-900 p-5 ring-1 ring-slate-800">
+          <dt class="font-semibold text-violet-300">Local Group</dt>
+          <dd class="mt-2 text-sm text-slate-400">The cluster of more than 50 galaxies that includes the Milky Way and Andromeda.</dd>
+        </div>
+      </dl>
+    </section>
 
-    loadCountries();
-  </script>
-</body>
-</html>
+    
+    <section id="facts" class="bg-slate-900 px-4 py-20 sm:px-6">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-10 text-center text-3xl font-bold text-white sm:text-4xl">More facts</h2>
+
+        <details class="mb-4 rounded-lg border border-slate-700 bg-slate-950 p-5 transition open:border-violet-400">
+          <summary class="cursor-pointer text-lg font-semibold transition hover:text-violet-300">How many galaxies are there?</summary>
+          <p class="mt-3 leading-relaxed text-slate-400">Estimates vary with the method used. Older counts suggested around 100 billion galaxies, while later estimates based on deep images push the number much higher, possibly around two trillion.</p>
+        </details>
+
+        <details class="mb-4 rounded-lg border border-slate-700 bg-slate-950 p-5 transition open:border-violet-400">
+          <summary class="cursor-pointer text-lg font-semibold transition h
