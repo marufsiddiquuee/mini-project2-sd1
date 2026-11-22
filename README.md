@@ -30,9 +30,6 @@ A single-page educational website about galaxies, built with semantic HTML and T
 
 An internet connection is needed for the Tailwind styles to load.
 
-## Image credits
-
-The Whirlpool Galaxy image is from [ESA/Hubble](https://esahubble.org). Check the licence on the original page before reuse.
 
 ## Author
 
